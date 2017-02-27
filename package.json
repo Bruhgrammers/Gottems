@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "redux-seed",
-  "version": "4.1.0",
-  "description": "Rubix Redux Starter Kit",
-  "homepage": "https://rubix410.sketchpixy.com/",
+  "name": "Gottems",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "",
   "watch": {
     "dev:server": "tmp/bundle.js"
   },

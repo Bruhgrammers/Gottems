@@ -1,17 +1,17 @@
 {
-  "name": "redux-seed",
-  "description": "Rubix - ReactJS Admin Template",
+  "name": "Gottems",
+  "description": "",
   "authors": [
     "Sketchpixy <support@sketchpixy.com>"
   ],
-  "copyright": "SketchPixy LLP, email: support@sketchpixy.com",
+  "copyright": "",
   "keywords": [
     "rubix",
     "admin",
     "sketchpixy",
     "reactjs"
   ],
-  "homepage": "http://rubix400.sketchpixy.com",
+  "homepage": "",
   "private": true,
   "ignore": [
     "**/.*",
