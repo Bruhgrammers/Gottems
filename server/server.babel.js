@@ -9,7 +9,7 @@ import graphQLHTTP from 'express-graphql';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
-import routes from './src/routes';
+import routes from '../src/routes';
 import {
   setupReducers,
   renderHTMLString,
@@ -22,10 +22,15 @@ import schema from './db/schema.js';
 
 import signup from './db/routes/signup.js';
 
-import reducers from './src/redux/reducers';
+import reducers from '../src/redux/reducers';
 setupReducers(reducers);
 
 const port = process.env.PORT || 8080;
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/gottems');
+
+mongoose.connection.on('error', console.error.bind(console, 'Connection error!'));
 
 let app = express();
 app.use(compression());

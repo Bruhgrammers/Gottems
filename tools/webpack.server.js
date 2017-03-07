@@ -29,7 +29,7 @@ delete webpackCommonConfig.module;
 module.exports = deepmerge({
   devtool: 'source-map',
   entry: [
-    './server.babel.js'
+    './server/server.babel.js'
   ],
   output: output,
   target: 'node',

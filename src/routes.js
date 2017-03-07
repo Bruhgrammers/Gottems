@@ -13,6 +13,7 @@ class App extends React.Component {
     return (
       <MainContainer {...this.props}>
         <div id='body'>
+        Hello, World
           <Grid>
             <Row>
               <Col xs={12}>
@@ -21,7 +22,6 @@ class App extends React.Component {
             </Row>
           </Grid>
         </div>
-        <Footer />
       </MainContainer>
     );
   }
