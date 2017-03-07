@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
       <MainContainer {...this.props}>
         <div id='body'>
-        Hello, World
+        Hello, World   changes
           <Grid>
             <Row>
               <Col xs={12}>
