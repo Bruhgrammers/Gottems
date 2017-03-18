@@ -59,21 +59,13 @@ export default class Signup extends React.Component {
                         </div>
                         <div>
                           <div style={{padding: 25, paddingTop: 0, paddingBottom: 0, margin: 'auto', marginBottom: 25, marginTop: 25}}>
-                            <Form onSubmit={::this.back}>
-                              <FormGroup controlId='username'>
-                                <InputGroup bsSize='large'>
-                                  <InputGroup.Addon>
-                                    <Icon glyph='icon-fontello-user' />
-                                  </InputGroup.Addon>
-                                  <FormControl autoFocus type='text' className='border-focus-blue' placeholder='Username' />
-                                </InputGroup>
-                              </FormGroup>
+                            <Form onSubmit={::this.back}>        
                               <FormGroup controlId='emailaddress'>
                                 <InputGroup bsSize='large'>
                                   <InputGroup.Addon>
                                     <Icon glyph='icon-fontello-mail' />
                                   </InputGroup.Addon>
-                                  <FormControl type='email' className='border-focus-blue' placeholder='support@sketchpixy.com' />
+                                  <FormControl type='email' className='border-focus-blue' placeholder='email' />
                                 </InputGroup>
                               </FormGroup>
                               <FormGroup controlId='password'>
@@ -82,6 +74,38 @@ export default class Signup extends React.Component {
                                     <Icon glyph='icon-fontello-key' />
                                   </InputGroup.Addon>
                                   <FormControl type='password' className='border-focus-blue' placeholder='password' />
+                                </InputGroup>
+                              </FormGroup>
+                              <FormGroup controlId='passwordretype'>
+                                <InputGroup bsSize='large'>
+                                  <InputGroup.Addon>
+                                    <Icon glyph='icon-fontello-key' />
+                                  </InputGroup.Addon>
+                                  <FormControl type='password' className='border-focus-blue' placeholder='retype password' />
+                                </InputGroup>
+                              </FormGroup>
+                              <FormGroup controlId='firstname'>
+                                <InputGroup bsSize='large'>
+                                  <InputGroup.Addon>
+                                    <Icon glyph='icon-fontello-user' />
+                                  </InputGroup.Addon>
+                                  <FormControl type='password' className='border-focus-blue' placeholder='first name' />
+                                </InputGroup>
+                              </FormGroup>
+                              <FormGroup controlId='lastname'>
+                                <InputGroup bsSize='large'>
+                                  <InputGroup.Addon>
+                                    <Icon glyph='icon-fontello-user' />
+                                  </InputGroup.Addon>
+                                  <FormControl type='password' className='border-focus-blue' placeholder='last name' />
+                                </InputGroup>
+                              </FormGroup>
+                              <FormGroup controlId='birthdate'>
+                                <InputGroup bsSize='large'>
+                                  <InputGroup.Addon>
+                                    <Icon glyph='icon-fontello-calendar' />
+                                  </InputGroup.Addon>
+                                  <FormControl type='password' className='border-focus-blue' placeholder='birthday' />
                                 </InputGroup>
                               </FormGroup>
                               <FormGroup>
