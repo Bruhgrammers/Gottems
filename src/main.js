@@ -3,7 +3,7 @@ require('es6-promise').polyfill();
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import routes from './routes';
+import App from './App';
 import render, {
   setupReducers,
   replaceReducers,
@@ -12,13 +12,13 @@ import render, {
 import reducers from './redux/reducers';
 
 setupReducers(reducers);
-render(routes);
+render(App);
 
 if (module.hot) {
-  module.hot.accept('./routes', () => {
-    // reload routes again
-    require('./routes').default;
-    render(routes);
+  module.hot.accept('./App', () => {
+    // reload App again
+    require('./App').default;
+    render(App);
   });
 
   module.hot.accept('./redux/reducers', () => {
