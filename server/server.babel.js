@@ -9,7 +9,7 @@ import graphQLHTTP from 'express-graphql';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
-import routes from '../src/routes';
+import App from '../src/App';
 import {
   setupReducers,
   renderHTMLString,
@@ -44,7 +44,7 @@ app.set('view engine', 'pug');
 app.use('/signup', signup);
 
 function renderHTML(req, res) {
-  renderHTMLString(routes, req, (error, redirectLocation, data) => {
+  renderHTMLString(App, req, (error, redirectLocation, data) => {
     if (error) {
       if (error.message === 'Not found') {
         res.status(404).send(error.message);
@@ -64,7 +64,7 @@ function renderHTML(req, res) {
 
 // graphQL stuff, figure out how to use later
 
-/* 
+/*
 app.use('/graphql', graphQLHTTP({
   schema,
   pretty: true,
