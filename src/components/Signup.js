@@ -37,11 +37,11 @@ export default class Signup extends React.Component {
     $('html').removeClass('authentication');
   }
 
-  getPath(path) {
-    var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
-    path = `/${dir}/${path}`;
-    return path;
-  }
+  // getPath(path) {
+  //   var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
+  //   path = `/${dir}/${path}`;
+  //   return path;
+  // }
 
   render() {
     return (
@@ -115,7 +115,7 @@ export default class Signup extends React.Component {
                               </Row>
                             </Grid>
                             <div style={{marginTop: 25}}>
-                              Already have an account? <Link to={::this.getPath('login')}>Login</Link>
+                              Already have an account? <Link to={'login'}>Login</Link>
                             </div>
                           </div>
                         </div>

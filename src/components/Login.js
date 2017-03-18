@@ -37,11 +37,11 @@ export default class Login extends React.Component {
     $('html').removeClass('authentication');
   }
 
-  getPath(path) {
-    var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
-    path = `/${dir}/${path}`;
-    return path;
-  }
+  // getPath(path) {
+  //   var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
+  //   path = `/${dir}/${path}`;
+  //   return path;
+  // }
 
   render() {
     return (
@@ -80,10 +80,10 @@ export default class Login extends React.Component {
                                 <Grid>
                                   <Row>
                                     <Col xs={6} collapseLeft collapseRight style={{paddingTop: 10}}>
-                                      <Link to={::this.getPath('signup')}>Sign up</Link>
+                                      <Link to={'/signup'}>Sign up</Link>
                                     </Col>
                                     <Col xs={6} collapseLeft collapseRight className='text-right'>
-                                      <Link to={::this.getPath('proceed')} outlined lg >Log in</Link>
+                                      <Link to={'/main'} outlined lg >Log in</Link>
                                     </Col>
                                   </Row>
                                 </Grid>
