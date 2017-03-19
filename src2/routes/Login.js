@@ -37,11 +37,11 @@ export default class Login extends React.Component {
     $('html').removeClass('authentication');
   }
 
-  // getPath(path) {
-  //   var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
-  //   path = `/${dir}/${path}`;
-  //   return path;
-  // }
+  getPath(path) {
+    var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
+    path = `/${dir}/${path}`;
+    return path;
+  }
 
   render() {
     return (
@@ -55,7 +55,7 @@ export default class Login extends React.Component {
                     <Panel>
                       <PanelBody style={{padding: 0}}>
                         <div className='text-center bg-darkblue fg-white'>
-                          <h3 style={{margin: 0, padding: 25}}>Gottems</h3>
+                          <h3 style={{margin: 0, padding: 25}}>Sign in to VALT</h3>
                         </div>
                         <div>
                           <div style={{padding: 25, paddingTop: 0, paddingBottom: 0, margin: 'auto', marginBottom: 25, marginTop: 25}}>
@@ -80,10 +80,10 @@ export default class Login extends React.Component {
                                 <Grid>
                                   <Row>
                                     <Col xs={6} collapseLeft collapseRight style={{paddingTop: 10}}>
-                                      <Link to={'ltr/signup'}>Sign up</Link>
+                                      <Link to={::this.getPath('signup')}>Sign up</Link>
                                     </Col>
                                     <Col xs={6} collapseLeft collapseRight className='text-right'>
-                                      <Link to={'ltr/main'} outlined lg >Log in</Link>
+                                      <Link to={::this.getPath('proceed')} outlined lg >Log in</Link>
                                     </Col>
                                   </Row>
                                 </Grid>

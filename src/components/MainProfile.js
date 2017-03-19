@@ -123,7 +123,6 @@ export default class Dashboard extends React.Component {
               </Panel>
             </PanelContainer>
           </Col>
-
         </Row>
       </div>
     );

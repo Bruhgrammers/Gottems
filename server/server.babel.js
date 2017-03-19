@@ -25,7 +25,7 @@ import signup from './db/routes/signup.js';
 import reducers from '../src/redux/reducers';
 setupReducers(reducers);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/gottems');
