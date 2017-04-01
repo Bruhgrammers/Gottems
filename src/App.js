@@ -1,9 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
 import { IndexRoute, Route, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import configureStore from './configureStore';
+
 import Login from './components/Login';
 import Signup from './components/Signup';
 import MainProfile from './components/MainProfile';
+
+const store = configureStore();
 
 import {
   Row,
@@ -161,20 +166,22 @@ import Lock from '../src2/routes/Lock';
 class App extends React.Component {
   render() {
     return (
-      <MainContainer {...this.props}>
-        <Sidebar />
-        <Header />
-        <div id='body'>
-          <Grid>
-            <Row>
-              <Col xs={12}>
-                {this.props.children}
-              </Col>
-            </Row>
-          </Grid>
-        </div>
-        <Footer />
-      </MainContainer>
+      <Provider store={store}>
+        <MainContainer {...this.props}>
+          <Sidebar />
+          <Header />
+          <div id='body'>
+            <Grid>
+              <Row>
+                <Col xs={12}>
+                  {this.props.children}
+                </Col>
+              </Row>
+            </Grid>
+          </div>
+          <Footer />
+        </MainContainer>
+      </Provider>
     );
   }
 }
