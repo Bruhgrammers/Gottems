@@ -43,7 +43,7 @@ export default class Dashboard extends React.Component {
                 <Grid>
                   <Row>
                   <Col xs={12}>
-                    <h3>Proceed by taking a Practice Test</h3>
+                    <h3>Main Profile</h3>
                     <Image src="https://img.veritasprep.com/gmat-practice-test-splash.jpg" responsive />
                     <p>
                     <LoremIpsum query='1s' />
