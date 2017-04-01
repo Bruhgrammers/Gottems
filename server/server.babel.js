@@ -22,7 +22,7 @@ import schema from './db/schema.js';
 
 import signup from './db/routes/signup.js';
 
-import reducers from '../src/redux/reducers';
+import reducers from '../src/redux/reducers/reducers';
 setupReducers(reducers);
 
 const port = process.env.PORT || 3000;
