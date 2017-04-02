@@ -9,7 +9,7 @@ import render, {
   replaceReducers,
 } from '@sketchpixy/rubix/lib/node/redux-router';
 
-import reducers from './redux/reducers';
+import reducers from './redux/reducers/reducers';
 
 setupReducers(reducers);
 render(App);
@@ -21,9 +21,9 @@ if (module.hot) {
     render(App);
   });
 
-  module.hot.accept('./redux/reducers', () => {
+  module.hot.accept('./redux/reducers/reducers', () => {
     // reload reducers again
-    let newReducers = require('./redux/reducers');
+    let newReducers = require('./redux/reducers/reducers');
     replaceReducers(newReducers);
   });
 }
