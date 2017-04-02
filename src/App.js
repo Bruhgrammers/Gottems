@@ -7,6 +7,7 @@ import configureStore from './configureStore';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import MainProfile from './components/MainProfile';
+import gCalendar from './components/Calendar';
 
 const store = configureStore();
 
@@ -43,46 +44,6 @@ import {
   Well,
   MainContainer,
 } from '@sketchpixy/rubix';
-
-/* Common Components */
-
-/* Pages */
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//
-//         <div
-//           style={{
-//             background: '#E9F0F5',
-//             paddingTop: '25px',
-//             paddingBottom: '25px',
-//             marginTop: '0px',
-//           }}
-//           id='body'>
-//           <Grid>
-//             <Row>
-//               <Col xs={12}>
-//                 wtf
-//                 {this.props.children}
-//               </Col>
-//             </Row>
-//           </Grid>
-//         </div>
-//
-//     );
-//   }
-// }
-//
-// const routes = (
-//   <Route path='/' component={App}>
-//     <Route path ='/signup' component={Signup} />
-//     <Route path ='/login' component={Login} />
-//     <Route path ='/main' component={MainProfile} />
-//   </Route>
-// );
-//
-// export default routes;
 
 import Sidebar from '../src2/common/sidebar';
 import Header from '../src2/common/header';
@@ -155,9 +116,6 @@ import Dropzonejs from '../src2/routes/Dropzonejs';
 import Cropjs from '../src2/routes/Cropjs';
 
 import Fonts from '../src2/routes/Fonts';
-
-// import Login from '../src2/routes/Login';
-// import Signup from '../src2/routes/Signup';
 import Invoice from '../src2/routes/Invoice';
 import Pricing from '../src2/routes/Pricing';
 
@@ -186,9 +144,6 @@ class App extends React.Component {
   }
 }
 
-/**
- * Includes Sidebar, Header and Footer.
- */
 const routes = (
   <Route component={App}>
     <Route path='dashboard' component={Dashboard} />
@@ -242,6 +197,7 @@ const routes = (
     <Route path='invoice' component={Invoice} />
     <Route path='pricing' component={Pricing} />
     <Route path='main' component={MainProfile} />
+    <Route path='gcalendar' component={gCalendar} />
   </Route>
 );
 

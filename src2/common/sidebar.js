@@ -37,9 +37,9 @@ class ApplicationSidebar extends React.Component {
               <div className='sidebar-nav-container'>
                 <SidebarNav style={{marginBottom: 0}} ref={(c) => this._nav = c}>
                   { /** Pages Section */ }
-                  <div className='sidebar-header'>VALT PAGES</div>
-                  <SidebarNavItem glyph='icon-fontello-gauge' name='Proceed' href={::this.getPath('proceed')} />
-                  <SidebarNavItem glyph='icon-fontello-gauge' name='Practice Test' href={::this.getPath('proceedpracticetest')} />
+                  <div className='sidebar-header'>Gottems PAGES</div>
+                  <SidebarNavItem glyph='icon-fontello-gauge' name='MainProfile' href={::this.getPath('main')} />
+                  <SidebarNavItem glyph='icon-fontello-gauge' name='Calendar' href={::this.getPath('gcalendar')} />
                   <SidebarNavItem glyph='icon-fontello-gauge' name='Diagnostic Quiz' href={::this.getPath('proceed-diagnostic-quiz')} />
                   <SidebarNavItem glyph='icon-fontello-gauge' name='Dashboard' href={::this.getPath('dashboard')} />
                   <SidebarNavItem glyph='icon-fontello-gauge' name='Lesson' href={::this.getPath('lesson')} />
